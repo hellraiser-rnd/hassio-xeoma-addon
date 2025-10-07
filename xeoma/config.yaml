@@ -1,0 +1,27 @@
+name: "Xeoma NVR"
+version: "1.0.0"
+slug: "xeoma"
+description: "Xeoma видеонаблюдение в Home Assistant"
+url: "https://felenasoft.com/xeoma/"
+arch:
+  - amd64
+startup: services
+boot: auto
+ingress: false
+panel_icon: mdi:cctv
+options:
+  http_port: 8090
+  archive_path: /media/xeoma
+schema:
+  http_port: int
+  archive_path: str
+ports:
+  8090/tcp: 8090
+map:
+  - media:rw
+  - config:rw
+  - share:rw
+devices:
+  - /dev/dri:/dev/dri:rwm
+docker_api: true
+network_mode: bridge
