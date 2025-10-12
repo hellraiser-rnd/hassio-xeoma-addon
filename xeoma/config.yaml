@@ -1,10 +1,12 @@
 name: "Xeoma NVR"
-version: "1.0.1"
+version: "1.0.2"
 slug: "xeoma"
 description: "Xeoma видеонаблюдение в Home Assistant"
 url: "https://felenasoft.com/xeoma/"
 arch:
   - amd64
+build_from:
+  amd64: ghcr.io/hassio-addons/debiab-base/amd64:stable
 startup: services
 boot: auto
 ingress: false
