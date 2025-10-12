@@ -6,7 +6,7 @@ url: "https://felenasoft.com/xeoma/"
 arch:
   - amd64
 build_from:
-  amd64: ghcr.io/hassio-addons/debiab-base/amd64:stable
+  amd64: ghcr.io/home-assistant/amd64-base-debian:latest
 startup: services
 boot: auto
 ingress: false
