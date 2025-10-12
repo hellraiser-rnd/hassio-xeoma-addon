@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-debian:latest
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
@@ -9,7 +9,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-RUN curl -o /root/xeoma_linux64.tgz http://felenasoft.com/xeoma/downloads/xeoma_linux64.tgz \
+RUN curl -o /root/xeoma_linux64.tgz https://felenasoft.com/xeoma/downloads/latest/linux/xeoma_linux64.tgz \
  && tar -xvzf /root/xeoma_linux64.tgz -C /root \
  && /root/xeoma.app -install -allmanual \
  && rm /root/xeoma_linux64.tgz
