@@ -1,5 +1,5 @@
 name: "Xeoma NVR"
-version: "1.0.0"
+version: "1.0.1"
 slug: "xeoma"
 description: "Xeoma видеонаблюдение в Home Assistant"
 url: "https://felenasoft.com/xeoma/"
